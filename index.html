@@ -1,116 +1,202 @@
 <!DOCTYPE HTML>
 <!--
   SMPL by BlackTie.co
-  http://blacktie.co/ | @BlackTie_co
+  https://blacktie.co/ | @BlackTie_co
   Free for personal and commercial use under the CCA 3.0 license (blacktie.co/about-themes/)
 -->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta name="description" content="Lets work together to make our world a better place" />
-<meta name="author" content="GFESH Membership" />
-<meta name="generator" content="Hugo 0.18.1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Lets work together to make our world a better place" />
+    <meta name="author" content="GFESH Membership" />
+    <meta name="generator" content="Hugo 0.18.1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
-<title>GFESH Membership</title>
-
-
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <title>GFESH Membership</title>
 
 
-<link rel="stylesheet" href="assets/css/main.css">
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|EB+Garamond">
-
-
-<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
 
-  
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link rel="stylesheet" href="assets/css/main.css">
 
-ga('create', 'UA-XXXXXXXX-1', 'auto');
-ga('send', 'pageview');
-</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|EB+Garamond">
 
 
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
 
-  </head>
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-  <body>
+</head>
+
+<body>
+
+    <div id="dialogInviteForm" title="Invite attendees">
+            <fieldset>
+                <label for="password">Key</label>
+                <input id="inviteCode" type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+            </fieldset>
+    </div>
+
+    <div id="dialogEnrolForm" title="Enrol for GFESH Membership">
+            <fieldset>
+                <label for="password">Code</label>
+                <input id="enrolCode" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+            </fieldset>
+    </div>
+
     <div class="container">
-      
-      
+
+
         <div class="logo">
-  <img src="assets/img/logo.png" width="100" alt="GFESH">
-</div>
-      
+            <img src="assets/img/logo.png" width="100" alt="GFESH">
+        </div>
 
-      
-      
+
+
+
         <div class="row centered">
-  <div class="col-lg-8 col-lg-offset-2 w">
-    <h1>GFESH Membership</h1>
-  </div>
-</div>
+            <div class="col-lg-8 col-lg-offset-2 w">
+                <h1>GFESH Membership</h1>
+            </div>
+        </div>
 
-      
 
-      
-      
+
+
+
         <div class="row centered">
-  <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
-    
-      <a data-toggle="tooltip" title="Sign-In" href="http://localhost:8080/ics/scheme/signin" target="_blank"><i class="fa fa-sign-in"></i></a>
-    
-      <a data-toggle="tooltip" title="Enrol" href="http://localhost:8080/ics/scheme/enrol" target="_blank"><i class="fa fa-user"></i></a>
-    
-      <a data-toggle="tooltip" title="Invite" href="http://localhost:8080/ics/scheme/invite" target="_blank"><i class="fa fa-bullhorn"></i></a>
-    
-  </div>
-</div>
+            <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
 
-      
+                <a data-toggle="tooltip" title="Sign-In" href="https://server.kstsvcs.in/ics/scheme/userLogin"><i class="fa fa-sign-in"></i></a>
+
+                <a id="enrol" data-toggle="tooltip" title="Enrol" href="#" target="_blank"><i class="fa fa-user"></i></a>
+
+                <a id="invite" data-toggle="tooltip" title="Invite" href="#" target="_blank"><i class="fa fa-bullhorn"></i></a>
+
+            </div>
+        </div>
+
+
     </div>
 
-    
-    
-      <div class="container">
-  <div class="row w centered">
-    <br>    
-    <div class="col-lg-6 col-lg-offset-3">
-      <p>There’s no limit to the wonderful things people can do working together if it doesn’t matter who gets the credit.</p>
+
+
+    <div class="container">
+        <div class="row w centered">
+            <br>
+            <div class="col-lg-6 col-lg-offset-3">
+                <p>There’s no limit to the wonderful things people can do working together if it doesn’t matter who gets the credit.</p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-    
 
-    
 
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
 
-<script>
-$('.tooltip-demo').tooltip({
-  selector: "[data-toggle=tooltip]",
-  container: "body"
-})
-</script>
+    <script>
+        $('.tooltip-demo').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+        })
+    </script>
 
 
 
 
-<script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
-<script>
-  $.backstretch("assets\/img\/bg.jpg", { speed:  500  });
-</script>
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("assets\/img\/bg.jpg", {
+            speed: 500
+        });
+    </script>
 
-  </body>
+    <script>
+        $(function() {
+          var dialogInvite,dialogEnrol;
+
+          function inviteAttendees() {
+            var inviteCode = $('#inviteCode').val();
+        		if(inviteCode) {
+        				var url = "https://server.kstsvcs.in/ics/api/actionHandler?actionCode=scheme_enrolAll&code="+inviteCode;
+                dialogInvite.dialog( "close" );
+                $.getJSON(url, {}, function(data) {
+                  alert(data.message);
+          			    });
+        		}
+        		else
+        			alert("Please provide master code!!");
+            return true;
+          }
+
+          dialogInvite = $( "#dialogInviteForm" ).dialog({
+            autoOpen: false,
+            height: 200,
+            width: 350,
+            modal: true,
+            buttons: {
+              "Invite Attendees": inviteAttendees,
+              Cancel: function() {
+                dialogInvite.dialog( "close" );
+              }
+            },
+            close: function() {
+              $('#inviteCode').val('');
+            }
+          });
+
+            $("#invite").click(function(e) {
+                e.preventDefault();
+                dialogInvite.dialog("open");
+            });
+
+            function enrolAttendees() {
+              var enrolCode = $('#enrolCode').val();
+          		if(enrolCode) {
+          				var url = "https://server.kstsvcs.in/ics/api/actionHandler?actionCode=scheme_enrol&code="+enrolCode;
+                  dialogEnrol.dialog( "close" );
+                  $.getJSON(url, {}, function(data) {
+                    alert(data.message);
+            			    });
+          		}
+          		else
+          			alert("Please provide enrolment/invitation code!!");
+              return true;
+            }
+
+            dialogEnrol = $( "#dialogEnrolForm" ).dialog({
+              autoOpen: false,
+              height: 200,
+              width: 350,
+              modal: true,
+              buttons: {
+                "Enrol": enrolAttendees,
+                Cancel: function() {
+                  dialogEnrol.dialog( "close" );
+                }
+              },
+              close: function() {
+                $('#enrolCode').val('');
+              }
+            });
+
+              $("#enrol").click(function(e) {
+                  e.preventDefault();
+                  dialogEnrol.dialog("open");
+              });
+
+
+        });
+    </script>
+
+</body>
+
 </html>
